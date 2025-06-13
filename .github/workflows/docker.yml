@@ -37,5 +37,5 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/${{ secrets.DOCKER_USERNAME }}:dev
+            ghcr.io/${{ env.DOCKER_REPO }}:dev
             ${{ steps.meta.outputs.tags }}

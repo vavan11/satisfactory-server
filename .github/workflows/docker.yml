@@ -4,6 +4,7 @@ on: [ push ]
 jobs:
   push:
     runs-on: ubuntu-latest
+    environment: env
     steps:
       - uses: actions/checkout@v4
 
@@ -37,5 +38,5 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/${{ env.DOCKER_REPO }}:dev
+            ghcr.io/${{ vars.DOCKER_REPO }}:dev
             ${{ steps.meta.outputs.tags }}

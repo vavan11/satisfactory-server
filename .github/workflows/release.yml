@@ -28,7 +28,8 @@ jobs:
         with:
           # List of Docker images to use as base name for tags.
           images: |
-            ${{ github.repository }}
+            ${{ vars.DOCKER_REPO }} 
+            # ${{ github.repository }}
             ghcr.io/${{ github.repository }}
           # Generate Docker tags based on the following events/attributes.
           tags: |

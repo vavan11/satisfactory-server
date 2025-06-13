@@ -55,3 +55,4 @@ STOPSIGNAL SIGINT
 EXPOSE 7777/udp 7777/tcp 8888/tcp
 
 ENTRYPOINT [ "/init.sh" ]
+
